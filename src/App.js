@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import  {PageHeader, Grid, Row, Col, Carousel, Alert} from "react-bootstrap";
+import {Alert, Carousel, Col, Grid, PageHeader, Row} from "react-bootstrap";
 import WeatherInfo from "./WeatherInfo";
 import Loader from "./Loader";
 
@@ -14,11 +14,12 @@ class App extends React.Component {
 
     componentWillMount() {
         const WEATHER_API = "bfc079575bff7ec0b8e4a53770e35ec7";
-        const FLICKR_API = "27ae36b8ba016b0092b6cb57722c4008";
-
+        const IMAGE_SEARCH_API = "afdjswhytex6mdk8dvm8aj2s";
+//http://maps.googleapis.com/maps/api/geocode/json?latlng=41.4925928,2.0763349&sensor=true
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(position => {
                 console.info("I've got the position %J", position.coords);
+
                 axios(`http://api.openweathermap.org/data/2.5/forecast/daily?units=metric&lang=es&lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${WEATHER_API}`, {mode: "no-cors"})
                     .then(response => {
                         this.setState({
@@ -32,25 +33,33 @@ class App extends React.Component {
                         console.warn(error);
                         this.setState({...this.state, loading: false, error});
                     });
-                const flickr_url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FLICKR_API}&lat=${position.coords.latitude}&lon=${position.coords.longitude}&per_page=20&format=json&nojsoncallback=1`;
+                // const flickr_url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${IMAGE_SEARCH_API}&lat=${position.coords.latitude}&lon=${position.coords.longitude}&per_page=20&format=json&nojsoncallback=1`;
 
-                axios(flickr_url)
+                axios(`https://api.gettyimages.com/v3/search/images`, {
+                    headers: {"Api-Key": IMAGE_SEARCH_API},
+                    params: {
+                        orientations: "Horizontal",
+                        phrase: "barcelona",
+                        page_size: 10
+                    }
+                })
+                // axios(flickr_url)
                     .then(response => {
                         console.info(response.data);
-                        if (response.data.photos && response.data.photos.photo.length > 0) {
-                            this.setState({
-                                ...this.state,
-                                photos: response.data.photos.photo.map(photo => ({
-                                    title: photo.title,
-                                    url: `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_z.jpg`
-                                }))
-                            });
-                        } else {
-                            this.setState({
-                                ...this.state,
-                                error: response.data.message
-                            });
-                        }
+                        // if (response.data.photos && response.data.photos.photo.length > 0) {
+                        //     this.setState({
+                        //         ...this.state,
+                        //         photos: response.data.photos.photo.map(photo => ({
+                        //             title: photo.title,
+                        //             url: `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_z.jpg`
+                        //         }))
+                        //     });
+                        // } else {
+                        //     this.setState({
+                        //         ...this.state,
+                        //         error: response.data.message
+                        //     });
+                        // }
                     })
                     .catch(error => {
                         console.warn(error);
