@@ -96,7 +96,7 @@ class App extends React.Component {
                 {this.state.weather_info && <Row>
 
                     {(this.state.photos && this.state.photos.length > 0) &&
-                    <Col sm={3}>
+                    <Col sm={6} md={4} lg={2}>
                         <Carousel>
                             {this.state.photos.map((photo, index) => (
                                 <Carousel.Item key={index}>
@@ -109,7 +109,7 @@ class App extends React.Component {
                     </Col>
                     }
                     {this.state.weather_info.list.map((weather, index) => (
-                        <Col sm={3} key={index}>
+                        <Col sm={6} md={4} lg={2} key={index}>
                             <WeatherInfo weather={weather}/>
                         </Col>
                     ))}
