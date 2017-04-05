@@ -2,12 +2,14 @@
   "name": "playground",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://anyulled.github.io",
   "dependencies": {
     "axios": "^0.15.3",
     "bootstrap": "^3.3.7",
-    "react": "^16.0.0-alpha.5",
+    "firebase": "^3.7.5",
+    "react": "^15.4.2",
     "react-bootstrap": "^0.30.8",
-    "react-dom": "^16.0.0-alpha.5"
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

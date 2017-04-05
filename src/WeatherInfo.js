@@ -9,7 +9,8 @@ class WeatherInfo extends React.Component {
             }
         } = this;
         const date = new Date(weather.dt * 1000);
-        const title = (<span><img alt="forecast" height="32" src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}/>
+        const title = (<span>
+            <img alt="forecast" height="32" src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}/>
             {`${date.toLocaleDateString()}`}</span>);
         return (<Panel header={title} bsStyle="info">
             <p>{`Clima: ${weather.weather[0].description}`}</p>
@@ -18,5 +19,17 @@ class WeatherInfo extends React.Component {
         </Panel>);
     }
 }
+
+WeatherInfo.propTypes = {
+    weather: React.PropTypes.shape({
+        dt: React.PropTypes.number,
+        weather: React.PropTypes.array,
+        temp: React.PropTypes.shape({
+            min: React.PropTypes.number,
+            max: React.PropTypes.number
+        }),
+        humidity: React.PropTypes.number
+    }).isRequired
+};
 
 export default WeatherInfo;
