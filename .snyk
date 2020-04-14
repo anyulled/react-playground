@@ -5,7 +5,7 @@ ignore: {}
 patch:
   'npm:debug:20170905':
     - axios > follow-redirects > debug:
-        patched: '2020-04-14T11:47:52.198Z'
+        patched: '2020-04-14T11:48:05.001Z'
   'npm:ms:20170412':
     - axios > follow-redirects > debug > ms:
-        patched: '2020-04-14T11:47:52.198Z'
+        patched: '2020-04-14T11:48:05.001Z'
