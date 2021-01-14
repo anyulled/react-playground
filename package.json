@@ -4,13 +4,13 @@
   "private": true,
   "homepage": "http://anyulled.github.io",
   "dependencies": {
-    "axios": "^0.21.1",
-    "bootstrap": "^3.3.7",
-    "firebase": "^4.5.1",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "snyk": "^1.305.1",
-    "react-bootstrap": "^0.30.10"
+    "axios": "0.21.1",
+    "bootstrap": "3.4.1",
+    "firebase": "4.13.1",
+    "react": "15.6.2",
+    "react-dom": "15.6.2",
+    "snyk": "1.305.1",
+    "react-bootstrap": "0.30.10"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
