@@ -10,7 +10,7 @@
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "snyk": "1.305.1",
-    "react-bootstrap": "0.30.10"
+    "react-bootstrap": "1.4.3"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
