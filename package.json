@@ -6,9 +6,9 @@
   "dependencies": {
     "axios": "0.21.1",
     "bootstrap": "3.4.1",
-    "firebase": "4.13.1",
-    "react": "15.6.2",
-    "react-dom": "15.6.2",
+    "firebase": "8.0.1",
+    "react": "16.5.0",
+    "react-dom": "16.5.0",
     "snyk": "1.305.1",
     "react-bootstrap": "0.30.10"
   },
