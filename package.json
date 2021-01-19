@@ -13,7 +13,7 @@
     "react-bootstrap": "1.4.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
