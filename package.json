@@ -8,7 +8,7 @@
     "bootstrap": "4.3.1",
     "firebase": "8.2.3",
     "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react-dom": "16.5.0",
     "snyk": "1.437.4",
     "react-bootstrap": "1.4.3"
   },
