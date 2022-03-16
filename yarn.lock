@@ -11158,10 +11158,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-snyk@1.752.0:
-  version "1.752.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.752.0.tgz#2901c04e83eece1dde35b67a5658f7dd4e27ca6a"
-  integrity sha512-jaDO3UD5DwIn8kitJsUOLG7TRBtd0MKeHCXBBOqkVeAAcOMDo4oEtamdnJi2EUjPIUoMNZbpVRHU/p9MK91Q+Q==
+snyk@1.872.0:
+  version "1.872.0"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.872.0.tgz#7e22b01ece4e1aea496e0514502085cd8daba14b"
+  integrity sha512-l6HV5xRqVFK/1owFo4kvgKfXAuZiFOp6SP6Z/FzkeRibmUTXyb6wX36hz8QcRJbsZEcfcqMiE7ZBIsF2ZzF6lw==
 
 sockjs-client@^1.5.0:
   version "1.5.0"
